@@ -1,0 +1,9 @@
+p {
+    color: white;
+    background-color: #4CAF50;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px #000000; /* Add this line */
+}

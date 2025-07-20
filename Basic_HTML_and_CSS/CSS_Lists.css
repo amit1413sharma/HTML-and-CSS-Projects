@@ -1,0 +1,13 @@
+/* Style for ordered list */
+ol {
+    list-style-type: upper-roman; /* Options: decimal, lower-alpha, upper-roman, etc. */
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Style for unordered list */
+ul {
+    list-style-type: square; /* Options: disc, circle, square, none, etc. */
+    color: darkgreen;
+    font-style: italic;
+}

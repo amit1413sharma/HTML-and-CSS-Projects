@@ -1,0 +1,27 @@
+/* Style the entire table */
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Style table headers */
+th {
+    background-color: #4CAF50; /* Green header background */
+    color: white;              /* White font color */
+    padding: 12px;
+    border: 1px solid #444;
+}
+
+/* Style table data cells */
+td {
+    color: #333;               /* Dark text */
+    padding: 10px;
+    border: 1px solid #999;    /* Gray borders */
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #e0f7fa; /* Light teal on hover */
+}
