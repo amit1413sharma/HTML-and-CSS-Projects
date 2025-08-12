@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Image Styling</title>
+  <style>
+
+    body {
+      padding-top: 70px; /* Prevent content from hiding behind navbar */
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #222;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navbar li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ff6600;
+    }
+
+    .centered-image {
+      display: block;
+      margin: 50px auto;
+      width: 300px;
+      filter: grayscale(50%) brightness(1.1);
+      border-radius: 20px;
+    }
+
+    .site-footer {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .car-table {
+      width: 80%;
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+
+    .car-table th,
+    .car-table td {
+      border: 1px solid #333;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .car-table thead {
+      background-color: #e0e0e0;
+    }
+
+    /* Video with text overlay container */
+    .video-text-container {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .video-text-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+      text-align: center;
+      pointer-events: none; /* Allows clicks to pass through */
+    }
+
+    .two-column-layout {
+      display: flex; /* Enables side-by-side columns */
+      justify-content: center; /* Center columns horizontally */
+      gap: 20px; /* Space between columns */
+      margin: 40px auto;
+      width: 80%; /* Width of the whole layout */
+    }
+
+    .column {
+      background-color: #f0f0f0; /* Light background for columns */
+      color: #333; /* Font color */
+      height: 200px; /* Fixed height */
+      width: 45%; /* Width of each column */
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .overlay-container {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .overlay-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .overlay-container:hover .overlay-image {
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      color: white;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay-container:hover .overlay-text {
+      opacity: 1; /* Fade in overlay on hover */
+    }
+
+    .hover-text {
+      color: #333;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .hover-text:hover {
+      color: white;
+      background-color: #ff6600;
+      cursor: pointer;
+    }
+
+    /* Video styling for Challenge 5-9 */
+    video#loop-video {
+      display: block;
+      margin: 40px auto;
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Video with Text Overlay (Challenge 5-10) -->
+  <div class="video-text-container">
+    <video autoplay muted loop playsinline>
+      <source src="video_clip.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay-text">Ultimate Performance</div>
+  </div>
+
+  <!-- Small Image + Table to the Bottom -->
+  <img src="car_1.jpg" alt="Sample Image" class="centered-image" />
+
+  <table class="car-table">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Top Speed (mph)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ferrari</td>
+        <td>812 Superfast</td>
+        <td>211</td>
+      </tr>
+      <tr>
+        <td>Lamborghini</td>
+        <td>Aventador</td>
+        <td>217</td>
+      </tr>
+      <tr>
+        <td>Bugatti</td>
+        <td>Chiron</td>
+        <td>261</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="two-column-layout">
+    <div class="column left-column">
+      <h2>Sports Car History</h2>
+      <p>Sports cars have always represented speed and luxury, combining engineering with design to create powerful machines.</p>
+    </div>
+    <div class="column right-column">
+      <h2>Popular Models</h2>
+      <p>Some iconic sports cars include the Ferrari F8, Porsche 911, and the Chevrolet Corvette.</p>
+    </div>
+  </div>
+
+  <div class="overlay-container">
+    <img src="car_3.jpg" alt="Sports Car" class="overlay-image" />
+    <div class="overlay-text">Check out this beast!</div>
+  </div>
+
+  <p class="hover-text">Hover over this paragraph to see the magic!</p>
+
+  <!-- Video embed for Challenge 5-9 -->
+  <video id="loop-video" autoplay muted loop playsinline>
+    <source src="video_clip.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2025 Sports Car Showcase. All rights reserved.
+  </footer>
+
+</body>
+</html>

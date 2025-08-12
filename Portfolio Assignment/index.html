@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amit Kumar - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: url("./image/pic_1.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Overlay to improve readability */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: -1;
+    }
+
+    /* Navigation - Dark Background */
+    header {
+      background: #1c1f26dd; /* dark translucent */
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f39c12; /* golden */
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+    }
+
+    /* Sections */
+    .section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 3rem;
+      background: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    /* About, GitHub, Contact sections with background image */
+    #about, #github, #contact {
+      background: url("./image/pic_2.jpg") no-repeat center center/cover;
+      color: white;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+
+    #about h2,
+    #about p,
+    #github h2,
+    #github p,
+    #contact h2,
+    #contact p {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Hero Section */
+    #home {
+      background: url("./image/pic_2.jpg") no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+      border-radius: 0;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* GitHub Button */
+    .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 12px 24px;
+      background: #f39c12;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .github-link:hover {
+      background: #e67e22;
+      transform: scale(1.05);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background: #f39c12;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #e67e22;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #ffffffee;
+      color: #888;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #home h1 {
+        font-size: 2.2rem;
+      }
+
+      .section {
+        margin: 2rem 1rem;
+        padding: 2rem;
+      }
+
+      .github-link, .contact-form button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" data-aos="fade-down">
+    <h1>Hello, I’m Amit Kumar</h1>
+    <p>Front-End Developer | Passionate Coder | Lifelong Learner</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m an aspiring web developer focused on building responsive, user-friendly websites. I enjoy learning modern web technologies and applying them to real-world projects. I'm currently mastering HTML, CSS, and JavaScript as I work toward becoming a full-stack developer.</p>
+  </section>
+
+  <!-- GitHub Section -->
+  <section id="github" class="section" data-aos="fade-up">
+    <h2>My GitHub</h2>
+    <p>Explore my code, projects, and collaborations:</p>
+    <a class="github-link" href="https://github.com/amit1413sharma/HTML-and-CSS-Projects.git" target="_blank">Visit My GitHub →</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Got a question or want to connect? Send me a message below.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Amit Kumar. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>
