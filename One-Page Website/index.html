@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Toy World</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="JS/one_page_website.js" defer></script>
 </head>
 <body>
 
@@ -25,9 +26,9 @@
   <section id="gallery">
     <h2>Our Toy Collection</h2>
     <div class="image-gallery">
-      <img src="images/toy1.jpeg" alt="Colorful building blocks" />
-      <img src="images/toy2.jpeg" alt="Action figures" />
-      <img src="images/toy3.jpeg" alt="Stuffed animal toys" />
+      <img src="images/toy1-thumb.jpeg" alt="Colorful building blocks" data-large="images/toy1-large.jpeg" class="lightbox-trigger" />
+      <img src="images/toy2-thumb.jpeg" alt="Action figures" data-large="images/toy2-large.jpeg" class="lightbox-trigger" />
+      <img src="images/toy3-thumb.jpeg" alt="Stuffed animal toys" data-large="images/toy3-large.jpeg" class="lightbox-trigger" />
     </div>
   </section>
 
@@ -58,6 +59,12 @@
   <footer>
     <p>&copy; 2025 Toy World. All rights reserved.</p>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+  </div>
 
 </body>
 </html>
